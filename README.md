@@ -18,11 +18,11 @@ My favorite visualization, a Heatmap that shows profitiability by genre and stor
 
 Top performers included:
 
-1. **Monster Force — Drama**  
-2. **Wretched Excess — Drama**  
-3. **Journey and Return — Drama**  
-4. **Maturation — Biography**  
-5. **Monster Force — Horror**
+1. **Monster Force - Drama**  
+2. **Wretched Excess - Drama**  
+3. **Journey and Return - Drama**  
+4. **Maturation - Biography**  
+5. **Monster Force - Horror**
 
 #### Accessibility Example
 
