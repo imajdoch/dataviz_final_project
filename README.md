@@ -1,6 +1,6 @@
 # Data Visualization and Reproducible Research
 
-> Firstname Lastname. 
+> Isabel Majdoch 
 
 
 The following is a sample of products created during the _"Data Visualization and Reproducible Research"_ course.
@@ -8,7 +8,7 @@ The following is a sample of products created during the _"Data Visualization an
 
 ## Project 01
 
-In the `project_01/` folder you can find... _[add short description of your revised project here]_
+In the `project_01/` folder you can find reasearch to determine which genres and story types are the most financially successful in Hollywood movies. 
 
 **Sample data visualization:** 
 
@@ -18,7 +18,7 @@ _[include your favorite visualization from this project here]_
 
 ## Project 02
 
-In this project, I explored ... _[short description of your revised project goes here]_ Find the code and report in the `project_02/` folder.
+In this project, I explored how different types of recipes around the world's micro nutrients (protien, fats, and carbs) compare. Find the code and report in the `project_02/` folder.
 
 **Sample data visualization:** 
 
