@@ -13,7 +13,7 @@ In the `project_01/` folder you can find reasearch to determine which genres and
 **Sample data visualization:** 
 
 _[include your favorite visualization from this project here]_
-<img src="https://raw.githubusercontent.com/aalhamadani/dataviz_final_project/main/figures/echarts.png" width="70%" height="70%">
+<img src="figures/Majdoch_P1_Heatmap.png" width="70%" height="70%">
 
 
 ## Project 02
