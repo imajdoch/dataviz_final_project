@@ -1,9 +1,11 @@
 ---
+
 title: "Mini Project 2 **Revised**"
 author: "Isabel Majdoch"
 output: html_notebook
 editor_options: 
   chunk_output_type: inline
+  
 ---
 
 # Project: Nutritional Content in Global Recipes  
