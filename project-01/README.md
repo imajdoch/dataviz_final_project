@@ -12,12 +12,12 @@ data/
 |
 project_01/
 │
-│
 │-- Majdoch_MiniProject1.Rmd
-│-- Majdoch_MiniP.html
-│-- Majdoch_P1.md
-|-- README.md
-│
+│-- Majdoch_MiniProject1.html
+│-- Majdoch_MiniProject1.md
+|
+└-- README.md
+
 
 ```
 
