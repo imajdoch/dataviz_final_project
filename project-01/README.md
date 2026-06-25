@@ -17,8 +17,6 @@ project_01/
 │-- Majdoch_MiniProject1.md
 |
 └-- README.md
-
-
 ```
 
 - Raw data is stored in the `data/` folder.  
