@@ -12,7 +12,7 @@ data/
 │-- cuisines.csv
 │-- all_recipes.csv
 |
-project_01/
+project_02/
 │
 │-- Majdoch_MiniProject2.Rmd
 │-- Majdoch_MiniProject2.html
