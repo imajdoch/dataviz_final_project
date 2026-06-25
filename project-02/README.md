@@ -30,12 +30,10 @@ The revisions include accessibility improvements, a redesigned chart, a new visu
 
 ---
 
-# How This Revision Meets the Final Project Requirements
-
-## 1. Interactive Chart
+## Interactive Chart
 The first visualization is an interactive Plotly bubble chart. Hovering over each cuisine reveals its average fat, carbs, protein, and rating. This makes it easier to compare cuisines than a static scatterplot, especially when points overlap.
 
-## 2. Accessibility
+## Accessibility
 All figures were updated to follow accessibility guidelines.  
 These updates include:
 
@@ -49,7 +47,7 @@ The spatial map originally used a difficult yellow-to-red palette, low contrast,
 The revised version uses a viridis scale, labels only high-protein countries, centers the title, and applies the updated theme.  
 Both the original and improved versions are included, along with an explanation of what was changed and why.
 
-## 4. Revised Mini Project 2 Report
+## Revised Mini Project 2 Report
 This revision includes:
 
 - A new density plot  
@@ -57,25 +55,8 @@ This revision includes:
 - A clearer title and subtitle for the interactive chart  
 - A rewritten narrative that explains the findings more clearly  
 - A consistent theme across all plots  
-- Better spacing, labeling, and accessibility  
-
-## 5. Reproducibility
-- All file paths are relative  
-- Required packages are listed  
-- The RMarkdown file knits cleanly  
-- The project follows the folder structure required in the final project template  
-
-## 6. Variety of Plot Types
-This project includes four different types of visualizations:
-
-- Interactive bubble chart  
-- Spatial choropleth map  
-- Model-based coefficient plot  
-- Density plot  
-
-## 7. Storytelling and Commentary
-Each visualization includes a short explanation of what it shows and why it matters. The report also discusses data cleaning steps, challenges, and limitations.
-
+- Better spacing, labeling, and accessibility
+- 
 ---
 
 # Data Used
@@ -92,21 +73,21 @@ A key challenge was that the “country” column in cuisines.csv did not repres
 
 # Visualizations
 
-## 1. Interactive Bubble Chart
+## Interactive Bubble Chart
 Compares average fat and carbs for each cuisine, with bubble size representing protein.  
 The updated version includes a clearer title, a subtitle, and improved spacing so the title does not overlap the chart.
 
-## 2. Spatial Map
+## Spatial Map
 Shows average protein content by country.  
 Only countries with average protein above 20 grams are labeled to avoid clutter.  
 Uses a viridis scale and the updated theme.
 
-## 3. Model Visualization
+## Model Visualization
 A linear model predicting protein from fat and carbs.  
 Fat has a strong positive relationship with protein.  
 Carbs do not contribute much.
 
-## 4. New Density Plot
+## New Density Plot
 Shows the distribution of protein across all recipes.  
 Most recipes are low in protein, with a long tail of high-protein dishes.
 
@@ -128,8 +109,4 @@ Most recipes are low in protein, with a long tail of high-protein dishes.
 ---
 
 # Conclusion
-This revised project brings together interactive, spatial, and statistical visualizations to explore global nutritional patterns. Updating the project for the final assignment improved accessibility, clarity, and consistency across all figures. The findings show that higher-fat cuisines tend to also be higher in protein, and that protein levels vary noticeably across regions.
-
----
-
-If you want, I can help you update the top-level README for the entire final project or revise the Project 1 README in the same style.
+This revised project brings together interactive, spatial, and statistical visualizations to explore global nutritional patterns. Updating for improved accessibility, clarity, and consistency across all figures. The findings show that higher-fat cuisines tend to also be higher in protein, and that protein levels vary noticeably across regions.
