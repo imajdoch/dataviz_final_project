@@ -1,139 +1,135 @@
----
-
-title: "Mini Project 2 **Revised**"
-author: "Isabel Majdoch"
-output: html_notebook
-editor_options: 
-  chunk_output_type: inline
-  
----
-
-# Project: Nutritional Content in Global Recipes  
-#### CAP 5735: Data Visualization and Reproducible Research
+# Project 02 — Nutritional Content in Global Recipes (Revised)  
+**Isabel Majdoch**  
+**CAP 5735: Data Visualization and Reproducible Research**  
+**Revised: June 24, 2026**
 
 ---
 
-## **Overview**
-This project explores global recipe data sourced from **Allrecipes.com** and curated through the *tastyR* package. The goal was to analyze how macronutrient: 
+## Project Structure
 
-- fat
-- carbohydrates
-- protein
-
-vary across different cuisines and to visualize these patterns using interactive, spatial, and statistical model‑based graphics.
-
-The analysis focuses on three core questions:
-
-> 1. **How do cuisines differ in their macronutrient composition?**  
-> 2. **Do these nutritional patterns show geographic structure when mapped to countries of origin?**  
-> 3. **Can we model the relationship between fat, carbs, and protein across recipes?**
-
----
-
-## **Data Description**
-The project uses two datasets:
-
-### **1. all_recipes.csv (14,426 recipes)**  
-Contains detailed recipe‑level information:
-- Ingredients  
-- Nutritional values (calories, fat, carbs, protein)  
-- Ratings and review counts  
-- Prep time, cook time, total time  
-- Recipe name, author, publication date, URL  
-
-### **2. cuisines.csv (2,218 recipes)**  
-Includes:
-- Recipe name  
-- Cuisine type (e.g., Italian, Cajun, Soul Food, Japanese)  
-- Nutritional and rating information  
-
-**Important note:**  
-The `country` column in this dataset actually represents **cuisine categories**, not actual countries. For the spatial visualization, cuisine types were mapped manually to their corresponding countries of origin.
-
-Both datasets share the `name` field, allowing them to be joined.
-
----
-
-## **Project Structure**
 ```
-MiniProject2/
+data/
+│-- cuisines.csv
+│-- all_recipes.csv
+|
+project_01/
 │
-├── MiniProject2.Rproj
-├── data/
-│   ├── all_recipes.csv
-│   ├── cuisines.csv
-│
-├── report/
-│   ├── Majdoch_MiniProject2.Rmd
-│   └── Majdoch_MiniProject2.html
-│
-└── README.md
+│-- Majdoch_MiniProject2.Rmd
+│-- Majdoch_MiniProject2.html
+│-- Majdoch_MiniProject2.md
+|
+└-- README.md
 ```
 
 ---
 
-## **Reproducibility Instructions**
-To reproduce this analysis:
+## Overview
+This project examines how macronutrients (fat, carbohydrates, and protein) vary across global cuisines. The data comes from Allrecipes.com through the tastyR package and the TidyTuesday project. I joined recipe-level nutrition data with cuisine labels, cleaned and mapped the cuisine categories to actual countries, and created several visualizations to explore patterns.
 
-1. Open the project by double‑clicking `MiniProject2.Rproj`.  
-2. Ensure the datasets are located in the `data/` folder.  
-3. Open `Majdoch_MiniProject2.Rmd` in the `report/` folder.  
-4. Install required packages if needed:
-   ```r
-   install.packages(c("tidyverse", "plotly", "sf", "rnaturalearth", "rnaturalearthdata", "broom"))
-   ```
-5. Knit the R Markdown file to HTML.
-
-All file paths are relative, so the project should run on any machine without modification.
+The revisions include accessibility improvements, a redesigned chart, a new visualization, and clearer explanations throughout.
 
 ---
 
-## **Summary of Findings**
-Across the three visualizations, several patterns emerged:
+# How This Revision Meets the Final Project Requirements
 
-- **Cuisines with higher fat content tend to also be higher in protein**, while carbohydrate levels vary more independently.  
-- The **interactive bubble chart** highlights nutrient trade‑offs and shows that cuisines like Pakistani, Cajun, and Southern Recipes tend to be richer in all three macronutrients.  
-- The **spatial map** reveals geographic variation in protein density, with Pakistan and several American‑influenced cuisines ranking highest.  
-- The **linear model** confirms that **fat is a strong positive predictor of protein**, while carbohydrates contribute little explanatory power.  
-- These patterns suggest meaningful nutritional differences across global cuisines, though they reflect recipes uploaded to Allrecipes.com rather than traditional cuisine as a whole.
+## 1. Interactive Chart
+The first visualization is an interactive Plotly bubble chart. Hovering over each cuisine reveals its average fat, carbs, protein, and rating. This makes it easier to compare cuisines than a static scatterplot, especially when points overlap.
+
+## 2. Accessibility
+All figures were updated to follow accessibility guidelines.  
+These updates include:
+
+- Colorblind-safe palettes (viridis)  
+- Alt text for every figure using the fig.alt option  
+- Avoiding color as the only way to convey meaning  
+- A custom theme that improves contrast and readability  
+
+## 3. Redesign of a Bad Chart
+The spatial map originally used a difficult yellow-to-red palette, low contrast, and lacked clear labeling.  
+The revised version uses a viridis scale, labels only high-protein countries, centers the title, and applies the updated theme.  
+Both the original and improved versions are included, along with an explanation of what was changed and why.
+
+## 4. Revised Mini Project 2 Report
+This revision includes:
+
+- A new density plot  
+- A fully updated spatial map  
+- A clearer title and subtitle for the interactive chart  
+- A rewritten narrative that explains the findings more clearly  
+- A consistent theme across all plots  
+- Better spacing, labeling, and accessibility  
+
+## 5. Reproducibility
+- All file paths are relative  
+- Required packages are listed  
+- The RMarkdown file knits cleanly  
+- The project follows the folder structure required in the final project template  
+
+## 6. Variety of Plot Types
+This project includes four different types of visualizations:
+
+- Interactive bubble chart  
+- Spatial choropleth map  
+- Model-based coefficient plot  
+- Density plot  
+
+## 7. Storytelling and Commentary
+Each visualization includes a short explanation of what it shows and why it matters. The report also discusses data cleaning steps, challenges, and limitations.
 
 ---
 
-## **Visualizations Included**
-This project includes the three required visualization types:
+# Data Used
 
-### **1. Interactive Plot (Plotly Bubble Chart)**  
-Shows average fat vs. carbs for each cuisine, with bubble size representing protein.  
-Allows users to explore nutrient profiles interactively.
+### all_recipes.csv  
+Contains 14,426 recipes with ingredients, nutrition, ratings, timing, and metadata.
 
-### **2. Spatial Visualization (Choropleth Map)**  
-Maps average protein content by country of origin after mapping cuisine types to countries.
+### cuisines.csv  
+Contains 2,218 recipes with cuisine labels.
 
-### **3. Model Visualization (Coefficient Plot)**  
-Displays the estimated effects of fat and carbs on protein using a linear model.
-
-All visualizations use a custom **food‑inspired theme** for consistency.
+A key challenge was that the “country” column in cuisines.csv did not represent actual countries. It represented cuisine categories. I created a mapping to convert these into actual countries for the spatial visualization.
 
 ---
 
-## **Data Cleaning & Challenges**
-Key challenges included:
+# Visualizations
 
-- The `country` field in the cuisine dataset did not contain actual countries.  
-  → Resolved by creating a manual mapping from cuisine types to countries.  
-- Many recipes had missing nutritional values.  
-  → Addressed using `na.rm = TRUE` during aggregation.  
-- Spatial joins required careful ordering of code chunks to ensure the `world` object existed before joining.  
-- Ensuring visual consistency across plots led to the creation of a custom theme.
+## 1. Interactive Bubble Chart
+Compares average fat and carbs for each cuisine, with bubble size representing protein.  
+The updated version includes a clearer title, a subtitle, and improved spacing so the title does not overlap the chart.
+
+## 2. Spatial Map
+Shows average protein content by country.  
+Only countries with average protein above 20 grams are labeled to avoid clutter.  
+Uses a viridis scale and the updated theme.
+
+## 3. Model Visualization
+A linear model predicting protein from fat and carbs.  
+Fat has a strong positive relationship with protein.  
+Carbs do not contribute much.
+
+## 4. New Density Plot
+Shows the distribution of protein across all recipes.  
+Most recipes are low in protein, with a long tail of high-protein dishes.
 
 ---
 
-## **Limitations**
-- Cuisine categories are broad and may not fully represent the diversity  
-- The dataset reflects recipes uploaded to Allrecipes.com, which may not represent global traditional cooking practices  
-- Nutritional values may vary in accuracy.
+# Data Cleaning and Challenges
+- Mapping cuisine categories to countries required manual work  
+- Some recipes had missing nutritional values  
+- Plotly titles needed manual spacing adjustments  
+- Ensuring consistent styling across all plots led to the creation of a custom theme  
 
 ---
 
-## **Conclusion**
-This project demonstrates how interactive, spatial, and statistical visualizations can work together to reveal meaningful patterns in global recipe data. The findings highlight nutritional differences across cuisines and show how macronutrients relate to one another across thousands of recipes.
+# Limitations
+- Cuisine categories are broad and do not capture the full diversity within each cuisine  
+- Allrecipes.com submissions may not reflect traditional cooking practices  
+- Nutritional values may vary in accuracy  
+
+---
+
+# Conclusion
+This revised project brings together interactive, spatial, and statistical visualizations to explore global nutritional patterns. Updating the project for the final assignment improved accessibility, clarity, and consistency across all figures. The findings show that higher-fat cuisines tend to also be higher in protein, and that protein levels vary noticeably across regions.
+
+---
+
+If you want, I can help you update the top-level README for the entire final project or revise the Project 1 README in the same style.
