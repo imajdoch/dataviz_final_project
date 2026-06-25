@@ -1,6 +1,4 @@
-# Project 02 Revised
-**Isabel Majdoch**  
-**CAP 5735: Data Visualization and Reproducible Research**  
+# Project 02 Revised README
 
 ---
 
