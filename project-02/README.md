@@ -1,7 +1,6 @@
-# Project 02 — Nutritional Content in Global Recipes (Revised)  
+# Project 02 Revised
 **Isabel Majdoch**  
 **CAP 5735: Data Visualization and Reproducible Research**  
-**Revised: June 24, 2026**
 
 ---
 
