@@ -72,12 +72,20 @@ ggplot(heat_data, aes(x = Genre, y = Story, fill = avg_profit)) +
   </tr>
 </table>
 
+The redesigned version improves clarity by:
+
+- Using a perceptually uniform palette
+- Adding percentage labels
+- Sorting genres by frequency
+- Applying a consistent theme
+
 #### Interactive Graph
 
 <img src="figures/Majdoch_P1_Interactive.png" width="70%" height="70%">
 
 The viewer can hover over each bubble to reveal exact values for profitability, opening weekend revenue, and budget. This makes it possible to compare genres more precisely, inspect outliers, and understand the underlying numbers without cluttering the visual with labels. Interactivity also allows the reader to focus on specific points of interest rather than interpreting everything at once, which improves clarity and engagement.
 
+---
 
 ## Project 02
 
@@ -139,6 +147,10 @@ theme_foodie_cb <- function(base_size = 14) {
     <td align="center"><strong>After</strong></td>
   </tr>
 </table>
+
+The revisions provide better accessibility wise, with the color palette being easier to read for color blind and providing alt text. It also labels the countries with the most protein content, naming them, for better readability. Also the title is centered so it can be properly read.
+
+---
 
 ## Project 03
 
