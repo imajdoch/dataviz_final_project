@@ -53,7 +53,6 @@ ggplot(heat_data, aes(x = Genre, y = Story, fill = avg_profit)) +
     axis.text.x = element_text(angle = 45, hjust = 1),
     panel.grid = element_blank()
   )
-
 ```
 
 - Colorblind‑safe palettes (viridis everywhere)
@@ -86,11 +85,60 @@ In this project, I explored how different types of recipes around the world's mi
 
 **Sample data visualization:** 
 
-_[include your favorite visualization from this project here]_
-<img src="https://raw.githubusercontent.com/aalhamadani/dataviz_final_project/main/figures/fl_higher_ed.png" width="80%" height="80%">
+My favority visualization is the interactive bubble graph that shows the carb, protien, and fat content per average cuisine.
 
-(you can place your figures in the `figures/` folder and use the `![](path_to_picture)` option to add the pictures here)
+<img src="figures/Majdoch_P2_Interactive.png" width="80%" height="80%">
 
+With a static image chart you wouldn't be able to get all of those details and it would be significantly more difficult to tell the difference between the different countries. 
+
+#### Accessibility Example
+
+Within the revised graphs in Project 2, you also are able to see where **accessability** is present throughout the revised project.
+
+- **Accessibility**: Added alt text to all figures and replaced custom palettes with colorblind‑safe viridis scales.
+- **Theme revision**: Updated the custom theme to ensure consistent contrast and readability.
+
+```
+library(viridis)
+
+theme_foodie_cb <- function(base_size = 14) {
+  theme_minimal(base_size = base_size) %+replace%
+    theme(
+      plot.background  = element_rect(fill = "#F7F4EA", color = NA),
+      panel.background = element_rect(fill = "#F7F4EA", color = NA),
+      legend.background = element_rect(fill = "#F7F4EA", color = NA),
+
+      panel.grid.major = element_line(color = "#E6DDC6", linewidth = 0.4),
+      panel.grid.minor = element_line(color = "#EFE8D8", linewidth = 0.2),
+
+      plot.title = element_text(face = "bold", size = base_size * 1.4, color = "#3A3A3A"),
+      plot.subtitle = element_text(size = base_size * 1.1, color = "#4A4A4A"),
+      plot.caption = element_text(size = base_size * 0.8, color = "#6A6A6A"),
+
+      axis.title = element_text(face = "bold", color = "#3A3A3A"),
+      axis.text  = element_text(color = "#3A3A3A"),
+
+      legend.title = element_text(face = "bold", color = "#3A3A3A"),
+      legend.text  = element_text(color = "#3A3A3A"),
+
+      strip.background = element_rect(fill = viridis(1, option = "C"), color = NA),
+      strip.text = element_text(face = "bold", color = "#3A3A3A")
+    )
+}
+```
+
+#### Redesign a bad chart (before / after)
+
+<table>
+  <tr>
+    <td><img src="figures/Majdoch_P2_Before.png" width="350"></td>
+    <td><img src="figures/Majdoch_P2_After.png" width="350"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Before</strong></td>
+    <td align="center"><strong>After</strong></td>
+  </tr>
+</table>
 
 ## Project 03
 
