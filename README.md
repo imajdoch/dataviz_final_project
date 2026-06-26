@@ -218,6 +218,7 @@ weather_tpa %>%
 This code shows the use of viridis, a color blind safe pallette. Also used alt text. 
 
 **FL Poly Bigram Graph**
+
 <img src="figures/Majdoch_P3_P2.png" width="80%" height="80%">
 
 ### Moving Forward
