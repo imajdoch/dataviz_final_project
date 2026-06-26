@@ -154,14 +154,72 @@ The revisions provide better accessibility wise, with the color palette being ea
 
 ## Project 03
 
-In this project, I explored ... _[short description of the data visualizations you for this part of the project produced goes here]_
+In this project, I explored the TPA weather dataset and recreated some of the 2016 TPA graphs into 2022. I also explain some of the text bigrams in Fl Poly News dataset. 
+
+#### Interactive
 
 **Sample data visualization:** 
 
-_[include your favorite visualization from this project here]_
-<img src="https://raw.githubusercontent.com/aalhamadani/dataviz_final_project/main/figures/concrete_density.png" width="80%" height="80%">
+<img src="figures/Majdoch_P3_Interactive.png" width="80%" height="80%">
 
+This is also an interactive graph, that when hovered over shows the specific rain amount on that day.
+
+#### Redesign a bad chart (before / after)
+<table>
+  <tr>
+    <td><img src="figures/Majdoch_P3_Before.png" width="350"></td>
+    <td><img src="figures/Majdoch_P3_After.png" width="350"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Before</strong></td>
+    <td align="center"><strong>After</strong></td>
+  </tr>
+</table>
+
+The original plot relied on default smoothing, identical y‑axis scales, and had no reference lines, making it difficult to compare central tendencies or understand how distributions varied across months.
+
+#### Accessibility Example
+
+Within the revised graphs in Project 2, you also are able to see where **accessability** is present throughout the revised project.
+
+- **Accessibility**: Added alt text to all figures and replaced custom palettes with colorblind‑safe viridis scales.
+- **Theme revision**: Updated the custom theme to ensure consistent contrast and readability.
+
+```
+{r, fig.alt="Distribution of daily maximum temperatures in Tampa for each month of 2022."}
+
+library(tidyverse)
+library(ggridges)
+library(viridis)
+
+weather_tpa %>%
+  mutate(month = factor(month,
+                        levels = 1:12,
+                        labels = month.name)) %>%
+  ggplot(aes(
+    x = max_temp,
+    y = month,
+    fill = month
+  )) +
+  geom_density_ridges(
+    color = "black",
+    quantile_lines = TRUE,
+    quantiles = 2
+  ) +
+  scale_fill_viridis_d(option = "plasma") +
+  labs(
+    x = "Maximum temperature (°F)",
+    y = NULL,
+    title = "Distribution of Daily Maximum Temperatures in Tampa (2022)"
+  ) +
+  theme_minimal()
+```
+
+This code shows the use of viridis, a color blind safe pallette. Also used alt text. 
+
+**FL Poly Bigram Graph**
+<img src="figures/Majdoch_P3_P2.png" width="80%" height="80%">
 
 ### Moving Forward
 
-_Please add here a short reflection on what you learned and what you plan to continue exploring in terms of data visualization, data storytelling, reproducible research, and/or related topics._
+Working on this project helped me understand how data visualization and reproducible research fit together. I learned how graphs can be improved, especially when using consistent themes and colorblind‑safe palettes. Revising my earlier work also showed me the value of storytelling, that they are more effective when they go towards a question rather than stand alone. I also gained more confidence in using R Markdown to create fully reproducible workflows, which is something I want to continue improving. Going forward, I plan to explore more interactive visualizations and learn additional libraries for presenting information in ways that are engaging.
